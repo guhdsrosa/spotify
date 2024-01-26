@@ -7,7 +7,7 @@
 body {
   width: 100%;
   height: 100vh;
-  background-color: #00d95a;
+  background-color: #101010;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -15,12 +15,13 @@ body {
 
 svg {
   width: 100%;
-  height: 300px;
+  height: 250px;
 }
 
 #music1 {
   transform-box: fill-box;
   animation: music1 10s ease-in-out forwards;
+  stroke: #FFFFFF;
 }
 
 @keyframes music1 {
@@ -55,11 +56,18 @@ svg {
   55% {
     transform: translate3d(0, 0, 0) scale(1);
     d: path("M222 250C221.999 273.434 222.003 286.563 222 310");
+    stroke: #FFFFFF;
+  }
+  65%, 100% {
+    transform: translate3d(0, 0, 0) scale(1);
+    d: path("M198 328C257.5 317.5 294 318 343 344");
+    stroke: #202120;
   }
 }
 #music2 {
   transform-box: fill-box;
   animation: music2 10s ease-in-out forwards;
+  stroke: #FFFFFF;
 }
 
 @keyframes music2 {
@@ -94,11 +102,18 @@ svg {
   55% {
     transform: translate3d(0, 0, 0) scale(1);
     d: path("M277 190C277 261 277 299.5 277 370");
+    stroke: #FFFFFF;
+  }
+  65%, 100% {
+    transform: translate3d(0, 0, 0) scale(1);
+    d: path("M194 281C254.5 265.5 309.5 272.5 359.5 301");
+    stroke: #202120;
   }
 }
 #music3 {
   transform-box: fill-box;
   animation: music3 10s ease-in-out forwards;
+  stroke: #FFFFFF;
 }
 
 @keyframes music3 {
@@ -133,5 +148,56 @@ svg {
   55% {
     transform: translate3d(0, 0, 0) scale(1);
     d: path("M338 250C337.999 273.434 338.003 286.563 338 310");
+    stroke: #FFFFFF;
+  }
+  65%, 100% {
+    transform: translate3d(0, 0, 0) scale(1);
+    d: path("M186 230.5C247 214 319.5 218 379.5 250");
+    stroke: #202120;
+  }
+}
+#bg {
+  transform-origin: center center;
+  opacity: 0;
+  animation: bg 10s ease 6s forwards;
+}
+
+@keyframes bg {
+  0% {
+    opacity: 1;
+    transform: scale(0);
+  }
+  6% {
+    opacity: 1;
+    transform: scale(1.3);
+  }
+  8%, 100% {
+    opacity: 1;
+    transform: scale(1);
+    filter: drop-shadow(0px 0px 4px #00d95a);
+  }
+}
+#text-spotify {
+  opacity: 0;
+  transform-origin: center center;
+  transform-box: fill-box;
+  animation: text 2s ease 6.5s forwards;
+  transform: translate3d(0, 0px, 0);
+}
+
+@keyframes text {
+  0% {
+    opacity: 0;
+    transform: perspective(400px) rotateX(90deg);
+  }
+  40% {
+    transform: perspective(400px) rotateX(-30deg);
+  }
+  70% {
+    transform: perspective(400px) rotateX(15deg);
+  }
+  100% {
+    opacity: 1;
+    transform: perspective(400px) rotateX(0deg);
   }
 }/*# sourceMappingURL=style.css.map */
